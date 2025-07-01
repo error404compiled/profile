@@ -2,14 +2,16 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LandingPage from "./Home/LandingPage";
 import Header from "./Header/Header";
 import LoginPage from "./Auth/LoginPage";
+import Home from "./Home/Home";
 
 function App() {
   return (
     <Router>
       {/* <Header /> */}
       <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/login" element={<LoginPage />} />
+        <Route path="/" element={<Home />} />
+        {/* <Route path="/" element={<LandingPage />} /> */}
+        {/* <Route path="/login" element={<LoginPage />} /> */}
         {/* Add more routes here if needed */}
       </Routes>
     </Router>

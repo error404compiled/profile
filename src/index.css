@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: 'Nunito', sans-serif;
+
+/* src/index.css or App.css */
+
+
+.dark body {
+  @apply bg-gray-900 text-white;
 }

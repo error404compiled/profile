@@ -1,0 +1,22 @@
+[
+  {
+    "title": "TT4D",
+    "description": "Generate winning combinations, view past results, and analyze lottery trends all in one place",
+    "tech": ["BS4", "Docker", "FastAPI", "Fly.io", "NextJS", "PostgreSQL", "Python", "TailwindCSS"],
+    "image": "/tt4d.png",
+    "links": [
+      { "label": "Website", "type": "globe", "href": "https://tt4d.example.com" },
+      { "label": "Source", "type": "github", "href": "https://github.com/user/tt4d" },
+      { "label": "Source (UI)", "type": "github", "href": "https://github.com/user/tt4d-ui" }
+    ]
+  },
+  {
+    "title": "Tradingview Telegram Alerts",
+    "description": "Real-time trading alerts with chart snapshots sent to Telegram, designed to keep traders informed and responsive to market changes",
+    "tech": ["Docker", "FastAPI", "Fly.io", "Python", "Selenium", "Telegram Bot API"],
+    "image": "/tv-tele-alerts.png",
+    "links": [
+      { "label": "Source", "type": "github", "href": "https://github.com/user/tradingview-alerts" }
+    ]
+  }
+]

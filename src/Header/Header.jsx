@@ -1,81 +1,51 @@
-import React, { useState } from "react";
-import logo from "../assets/white-logo.png";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 
-const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+const navLinks = ["home", "projects", "blog", "contact"];
+
+export default function Header() {
+  const [isDark, setIsDark] = useState(false);
+
+  // Toggle dark mode class on html tag
+  useEffect(() => {
+    const html = document.documentElement;
+    if (isDark) {
+      html.classList.add("dark");
+    } else {
+      html.classList.remove("dark");
+    }
+  }, [isDark]);
 
   return (
-    <header className="relative z-10 bg-[#0e9ee4] text-white shadow">
-      <div className="flex justify-between items-center py-3 px-4 md:px-8 lg:px-20">
-        {/* Logo */}
-        <div className="flex items-center space-x-2">
-          <img src={logo} alt="XportUs Logo" className="h-12" />
-        </div>
+    <header className="sticky top-0 z-50 bg-white/90 dark:bg-gray-900 backdrop-blur-md shadow-sm">
+      <div className="w-full max-w-4xl mx-auto px-6 py-5">
+        <nav className="flex items-center justify-between">
+          {/* Nav links left */}
+          <ul className="flex gap-6 text-gray-600 dark:text-gray-300 text-lg">
+            {navLinks.map((name, idx) => (
+              <li key={idx}>
+                <a
+                  href="#"
+                  className="hover:text-black dark:hover:text-white capitalize transition"
+                >
+                  {name}
+                </a>
+              </li>
+            ))}
+          </ul>
 
-        {/* Desktop Nav */}
-        <div className="hidden md:flex space-x-4">
-          <Link to="/login">
-            <button className="bg-white text-[#0e9ee4] px-4 py-2 rounded-full font-semibold hover:shadow-md">
-              Login
-            </button>
-          </Link>
-          <Link to="/signup">
-            <button className="bg-white text-[#0e9ee4] px-4 py-2 rounded-full font-semibold hover:shadow-md">
-              Sign Up
-            </button>
-          </Link>
-        </div>
-
-        {/* Mobile Menu Icon */}
-        <div className="md:hidden">
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="focus:outline-none"
-          >
-            <svg
-              className="w-6 h-6 text-white"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+          {/* Buttons right */}
+          <div className="flex gap-4 text-xl">
+            <button title="Chat Toggle">💬</button>
+            <button
+              title="Toggle Theme"
+              onClick={() => setIsDark(!isDark)}
+              className="transition-transform"
             >
-              {menuOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
-            </svg>
-          </button>
-        </div>
+              {isDark ? "☀️" : "🌙"}
+            </button>
+          </div>
+        </nav>
       </div>
-
-      {/* Mobile Dropdown Menu */}
-      {menuOpen && (
-        <div className="absolute right-4 top-20 bg-white text-[#0e9ee4] rounded shadow p-4 space-y-2 md:hidden">
-          <Link to="/login">
-            <button className="w-full text-left px-4 py-2 font-semibold hover:bg-[#0e9ee4] hover:text-white rounded">
-              Login
-            </button>
-          </Link>
-          <Link to="/signup">
-            <button className="w-full text-left px-4 py-2 font-semibold hover:bg-[#0e9ee4] hover:text-white rounded">
-              Sign Up
-            </button>
-          </Link>
-        </div>
-      )}
     </header>
   );
-};
-
-export default Header;
+}

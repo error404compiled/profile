@@ -1,0 +1,55 @@
+[
+  {
+    "name": "MAQ Software",
+    "href": "https://maqsoftware.com/",
+    "title": "Software Engineer",
+    "logo": "/MAQ.png",
+    "start": "Jul 2023",
+    "description": [
+      "Built and improved machine learning models for sales forecasting and data analysis, leading to better prediction accuracy.",
+      "Developed data pipelines and AI agents to automate processing and decision-making, reducing manual effort and processing time."
+    ]
+  },
+  {
+    "name": "Oxygen to Innovation",
+    "href": "https://www.o2i.tech/",
+    "title": "Machine Learning Engineer",
+    "logo": "/O2I.png",
+    "start": "May 2022",
+    "end": "Jul 2023",
+    "description": [
+      "Designed and implemented AI systems for drones and simulators to improve target recognition, mission planning, and pilot training.",
+      "Built real-time stress detection tools and enhanced ground control systems to support better health monitoring and operational efficiency."
+    ],
+    "links": [
+      {
+        "name": "NFTVue",
+        "href": "https://nftvue.vercel.app",
+        "icon": "globe"
+      }
+    ]
+  },
+  {
+    "name": "Neuherbs",
+    "href": "https://neuherbs.com/",
+    "title": "Software Engineer (Intern)",
+    "logo": "/NEUHERBS.png",
+    "start": "Jan 2022",
+    "end": "Apr 2022",
+    "description": [
+      "Developed Python scripts using BeautifulSoup4 to automate web scraping from e-commerce platforms like Amazon and Flipkart for data analysis.",
+      "Supported digital marketing efforts by building tools for backlink generation and optimizing ad campaigns, contributing to improved website performance."
+    ]
+  },
+  {
+    "name": "Tech Mahindra",
+    "href": "https://www.techmahindra.com/",
+    "title": "Software Developer (Intern)",
+    "logo": "/TECH-MAHINDRA.png",
+    "start": "Jul 2021",
+    "end": "Dec 2021",
+    "description": [
+      "Gained experience in communication, problem-solving, and understanding customer needs."
+    ]
+  }
+]

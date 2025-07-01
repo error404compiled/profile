@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Dr. A.P.J. Abdul Kalam Technical University",
+    "href": "https://aktu.ac.in/",
+    "title": "B.Tech in Computer Science and Engineering",
+    "logo": "/AKTU.png",
+    "start": "May 2019",
+    "end": "Jun 2023",
+    "description": [
+      "Completed B.Tech with strong emphasis on Machine Learning and core CS subjects.",
+      "Head of Training and Placement Cell, coordinating student-industry interactions.",
+      "Built several academic ML/data science projects using Python and libraries like Pandas, Scikit-learn, TensorFlow."
+    ],
+    "links": [
+      {
+        "name": "Final Year Project",
+        "href": "https://games.digipen.edu/games/rapid-ride-fight",
+        "icon": "globe"
+      },
+      {
+        "name": "Degree Certificate",
+        "href": "https://drive.google.com/file/d/1zNuSM202REDwFeqQe4-i5o4Jb2418tj8/view?usp=sharing",
+        "icon": "globe"
+      }
+    ]
+  }
+ 
+]
