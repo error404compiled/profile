@@ -1,0 +1,38 @@
+name: Deploy React App to cPanel via FTP
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  FTP-Deploy-Action:
+    name: Build and Deploy React App to cPanel
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 22 # Adjust this if needed
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the React app
+        run: npm run build
+
+      - name: Deploy to cPanel via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: ${{ secrets.FTP_PORT }}
+          local-dir: dist/ # Vite builds to 'dist' folder
+          server-dir: /hritiksharma.clickitindia.org/ # Your target directory on cPanel
