@@ -35,5 +35,5 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           port: ${{ secrets.FTP_PORT }}
           local-dir: dist/ # Vite builds to 'dist' folder
-          server-dir: /home/synkiqco/hritiksharma.clickitindia.org/ # Your target directory on cPanel
+          server-dir: ../hritiksharma.clickitindia.org/# Your target directory on cPanel
           # jjjj
