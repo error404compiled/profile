@@ -65,20 +65,34 @@ const renderCard = (item, idx, isLast) => (
     <>
       <Header />
       <main className="min-h-screen bg-white dark:bg-gray-950 text-black dark:text-white px-6 md:px-20 py-10 font-sans flex items-center justify-center">
-        <div className="w-full max-w-4xl">
+        <div className="w-full max-w-3xl">
           {/* Hero */}
-          <section className="flex flex-col md:flex-row items-center justify-center gap-6 text-center md:text-left">
-            <div className="flex-1">
-              <h1 className="text-5xl font-black">hi <span className="text-black dark:text-white">hritik</span> here. 👋</h1>
-              <p className="mt-4 text-lg font-semibold">{age}-year-old Machine Learning Engineer from India 🇮🇳</p>
-              <p className="mt-3 text-lg text-gray-800 dark:text-gray-200">            Making machines smarter, one model at a time.
-</p>
-            </div>
-            
-            <div className="flex-shrink-0">
-              <img src={profile} alt="Profile" className="rounded-xl w-48 h-48 object-cover" />
-            </div>
-          </section>
+<section className="flex flex-col md:flex-row items-center justify-center gap-10 text-center md:text-left py-8">
+  <div className="flex-1">
+    <h1 className="text-5xl font-extrabold leading-tight">
+      Hello, I'm <span className="text-black dark:text-white">Hritik</span>
+      <span className="inline-block animate-wave ml-2">👋</span>
+    </h1>
+    <p className="mt-4 text-xl font-medium text-gray-900 dark:text-gray-200">
+      A {age}-year-old Machine Learning Engineer from India 🇮🇳
+    </p>
+    <p className="mt-3 text-lg text-gray-700 dark:text-gray-300">
+      I specialize in building intelligent systems — making machines smarter, one model at a time.
+    </p>
+  </div>
+
+  <div className="flex-shrink-0 transform rotate-3 hover:rotate-0 transition-transform duration-500">
+    <img
+      src={profile}
+      alt="Hritik's Profile"
+      className="rounded-2xl w-48 h-64 object-cover shadow-lg"
+    />
+  </div>
+</section>
+
+
+
+
 <p className="mt-3 text-lg text-gray-800 dark:text-gray-200">
   Making machines smarter, one model at a time.
 </p>
@@ -119,7 +133,7 @@ const renderCard = (item, idx, isLast) => (
 
           {/* Tab Switcher */}
           <div className="mt-20">
-            <div className="flex w-fit w-full max-w-4xl mx-auto border dark:border-gray-700 rounded-full overflow-hidden mb-6 justify-center items-center">
+            <div className="flex w-fit w-full max-w-3xl mx-auto border dark:border-gray-700 rounded-full overflow-hidden mb-6 justify-center items-center">
               <button
                 onClick={() => setActiveTab("work")}
                 className={`px-6 py-2 font-semibold ${activeTab === "work" ? "bg-white dark:bg-gray-900 text-black dark:text-white" : "text-gray-400 dark:text-gray-500"}`}
@@ -134,7 +148,7 @@ const renderCard = (item, idx, isLast) => (
               </button>
             </div>
 
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-3xl mx-auto">
             <div className="relative border-l-2 border-gray-300 dark:border-gray-700 ml-6">
   {(activeTab === "work" ? workData : eduData).map((item, idx, arr) =>
     renderCard(item, idx, idx === arr.length - 1)

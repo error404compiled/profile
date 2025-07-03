@@ -16,7 +16,7 @@ This site showcases my work experience, education, and featured machine learning
 ## 🖼️ Live Preview
 
 Check out the live portfolio:  
-👉 [https://your-portfolio-domain.com](https://your-portfolio-domain.com) *(replace with your domain)*
+👉 [https://hritiksharma.clickitindia.org/](https://hritiksharma.clickitindia.org/) *(replace with your domain)*
 
 ---
 
